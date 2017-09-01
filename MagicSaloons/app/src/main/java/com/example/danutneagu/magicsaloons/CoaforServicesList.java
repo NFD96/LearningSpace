@@ -28,7 +28,7 @@ public class CoaforServicesList extends AppCompatActivity {
             , "Produse Machiaj", "Produse Unghii", "Produse Par"
     };
 
-
+    //Test
     public static Integer[] sectionsImages = {
             R.drawable.coafor,R.drawable.manichiura,R.drawable.cosmetica,R.drawable.tratamente,R.drawable.epilare,
             R.drawable.machiajsemi,R.drawable.pmachiaj,R.drawable.punghii,R.drawable.ppar,
@@ -57,5 +57,6 @@ public class CoaforServicesList extends AppCompatActivity {
         Intent intent = new Intent(this, ListViewImage.class);
         startActivityForResult(intent, RESULT_OK);
         finish();
+        overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
     }
 }

@@ -30,20 +30,46 @@ public class Contact extends AppCompatActivity {
         setContentView(R.layout.activity_contact);
         ButterKnife.bind(this);
 
+        String name = _editText.getText().toString();
+        String phone = _editText2.getText().toString();
+        String email = _editText3.getText().toString();
+        String mess = _editText4.getText().toString();
+
 
 
         _button.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                 String name = _editText.getText().toString();
-                 String phone = _editText2.getText().toString();
-                 String email = _editText3.getText().toString();
-                 String mess = _editText4.getText().toString();
-                Toast.makeText(Contact.this, "Test: " + name + " " + phone + " " + email + " " + mess + "." , Toast.LENGTH_LONG).show();
-            }
-        });
+                                       @Override
+                                       public void onClick(View v) {
+                                           boolean valid = true;
+                                           String name = _editText.getText().toString();
+                                           String phone = _editText2.getText().toString();
+                                           String email = _editText3.getText().toString();
+                                           String mess = _editText4.getText().toString();
 
+                                           if (name.isEmpty() || name.length() < 3) {
+                                               _editText.setError("at least 3 characters");
+                                               valid = false;
+                                           } else {
+                                               _editText.setError(null);
+                                           }
+                                           if (phone.isEmpty() || phone.length() != 10) {
+                                               _editText2.setError("enter a valid mobile number");
+                                               valid = false;
+                                           } else {
+                                               _editText2.setError(null);
+                                           }
+                                           if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                                               _editText3.setError("enter a valid email address");
+                                               valid = false;
+                                           } else {
+                                               _editText3.setError(null);
+                                           }
+                                           Toast.makeText(Contact.this, "Sending Test: " + name + " " + phone + " " + email + " " + mess + " " + valid + ".", Toast.LENGTH_LONG).show();
+
+                                       }
+
+                                   });
 
 
     }
@@ -65,5 +91,7 @@ public class Contact extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivityForResult(intent, RESULT_OK);
         finish();
+        overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
     }
 }
+

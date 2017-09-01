@@ -25,7 +25,6 @@
 
     <Button
         android:id="@+id/button1"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -35,6 +34,7 @@
         android:layout_marginTop="8dp"
         android:isScrollContainer="true"
         android:text="Programari"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -44,26 +44,26 @@
 
     <Button
         android:id="@+id/button2"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="0dp"
         android:text="Products &amp; Services"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
     <Button
         android:id="@+id/button3"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="0dp"
         android:text="Contact"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/button1"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -71,7 +71,6 @@
 
     <Button
         android:id="@+id/button4"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -79,6 +78,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:text="Logout"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"

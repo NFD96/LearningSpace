@@ -97,7 +97,9 @@ public class SignupActivity extends AppCompatActivity {
 
     public void onSignupSuccess() {
         _signupButton.setEnabled(true);
-        setResult(RESULT_OK, null);
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        setResult(RESULT_OK, intent);
+        startActivityForResult(intent, RESULT_OK);
         finish();
     }
 
@@ -125,7 +127,7 @@ public class SignupActivity extends AppCompatActivity {
         }
 
         if (address.isEmpty()) {
-            _addressText.setError("Enter Valid Address");
+            _addressText.setError("enter a valid address");
             valid = false;
         } else {
             _addressText.setError(null);
@@ -140,20 +142,20 @@ public class SignupActivity extends AppCompatActivity {
         }
 
         if (mobile.isEmpty() || mobile.length()!=10) {
-            _mobileText.setError("Enter Valid Mobile Number");
+            _mobileText.setError("enter a valid mobile number");
             valid = false;
         } else {
             _mobileText.setError(null);
         }
 
-        if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
-            _passwordText.setError("between 4 and 10 alphanumeric characters");
+        if (password.isEmpty() || password.length() < 4 || password.length() > 16) {
+            _passwordText.setError("between 4 and 16 alphanumeric characters");
             valid = false;
         } else {
             _passwordText.setError(null);
         }
 
-        if (reEnterPassword.isEmpty() || reEnterPassword.length() < 4 || reEnterPassword.length() > 10 || !(reEnterPassword.equals(password))) {
+        if (reEnterPassword.isEmpty() || reEnterPassword.length() < 4 || reEnterPassword.length() > 16 || !(reEnterPassword.equals(password))) {
             _reEnterPasswordText.setError("Password Do not match");
             valid = false;
         } else {
