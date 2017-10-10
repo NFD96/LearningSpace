@@ -23,7 +23,8 @@
             android:layout_height="72dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo"
+            android:contentDescription="@string/Logo"/>
 
         <!-- Name Label -->
         <android.support.design.widget.TextInputLayout
@@ -36,7 +37,7 @@
                 android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"
+                android:hint="@string/Nume"
                 android:inputType="textPersonName"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -51,7 +52,7 @@
                 android:id="@+id/input_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Address"
+                android:hint="@string/adresa"
                 android:inputType="textPostalAddress"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -67,7 +68,7 @@
                 android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="@string/wEmail"
                 android:inputType="textEmailAddress"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -83,7 +84,7 @@
                 android:id="@+id/input_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Mobile Number"
+                android:hint="@string/Telefon"
                 android:inputType="number"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -98,7 +99,7 @@
                 android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint="@string/prompt_password"
                 android:inputType="textPassword"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -113,7 +114,7 @@
                 android:id="@+id/input_reEnterPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Re-enter Password"
+                android:hint="@string/ReEnterPass"
                 android:inputType="textPassword"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -125,7 +126,7 @@
             android:layout_marginBottom="24dp"
             android:layout_marginTop="24dp"
             android:padding="12dp"
-            android:text="Create Account"/>
+            android:text="@string/CreateAcc"/>
 
         <TextView
             android:id="@+id/link_login"
@@ -133,8 +134,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:gravity="center"
-            android:text="Already a member? Login"
-            android:textSize="16dip"/>
+            android:text="@string/Amember"
+            android:textSize="16sp"/>
 
     </LinearLayout>
 </ScrollView>

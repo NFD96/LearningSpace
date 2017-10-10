@@ -30,7 +30,7 @@
             android:name=".SignupActivity"
             android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".ListViewImage"
+            android:name=".CoaforServicesList"
             android:theme="@style/Theme.AppCompat">
         </activity>
         <activity android:name=".ImageList">
@@ -42,8 +42,37 @@
         <activity android:name=".ImageList2">
         </activity>
         <activity
-            android:name=".CoaforServicesList"
+            android:name=".CoaforServicesList2"
             android:theme="@style/Theme.AppCompat">
+        </activity>
+        <activity
+            android:name=".AboutUs"
+            android:theme="@style/Theme.AppCompat">
+        </activity>
+        <activity
+            android:name=".VideoViewActivity">
+        </activity>
+        <activity
+            android:name=".Deals"
+            android:theme="@style/Theme.AppCompat">
+        </activity>
+        <activity
+            android:name=".Gallery"
+            android:theme="@style/Theme.AppCompat">
+        </activity>
+        <activity
+            android:name=".Blog"
+            android:theme="@style/Theme.AppCompat">
+        </activity>
+        <activity
+            android:name=".WorkWithUs"
+            android:theme="@style/Theme.AppCompat">
+        </activity>
+        <activity
+            android:name=".Newsletter"
+            android:theme="@style/Theme.AppCompat">
+        </activity>
+        <activity android:name=".CoaforServicesAndProductsSearch">
         </activity>
     </application>
 

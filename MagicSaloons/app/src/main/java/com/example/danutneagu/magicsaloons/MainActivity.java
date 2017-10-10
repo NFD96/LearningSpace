@@ -2,18 +2,10 @@ package com.example.danutneagu.magicsaloons;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.media.MediaBrowserServiceCompat;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -38,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.button2) Button _button2;
     @Bind(R.id.button3) Button _button3;
     @Bind(R.id.button4) Button _button4;
+    @Bind(R.id.button5) Button _button5;
+    @Bind(R.id.button6) Button _button6;
+    @Bind(R.id.button7) Button _button7;
+    @Bind(R.id.button8) Button _button8;
+    @Bind(R.id.button9) Button _button9;
 
 //    Button homeButton = (Button)findViewById(R.id.button1);
 //    Button psButton = (Button)findViewById(R.id.button2);
@@ -56,26 +53,27 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 
 
-//        _button1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//               Intent intent1 = new Intent(getApplicationContext(), LoginActivity.class);
-//                startActivityForResult(intent1, RESULT_OK);
-//                finish();
-//                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
-//            }
-//        });
-//        Log.d(TAG, "onCreate: out");
+        _button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent1 = new Intent(getApplicationContext(), AboutUs.class);
+                startActivityForResult(intent1, RESULT_OK);
+                finish();
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+            }
+        });
+        Log.d(TAG, "onCreate: out");
 
         _button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent2 = new Intent(getApplicationContext(), ListViewImage.class);
+               Intent intent2 = new Intent(getApplicationContext(), CoaforServicesList.class);
                 startActivityForResult(intent2,RESULT_OK);
                 finish();
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
+        Log.d(TAG, "onCreate: out");
 
         _button3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
+        Log.d(TAG, "onCreate: out");
 
         _button4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +95,62 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
+        Log.d(TAG, "onCreate: out");
+
+        _button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent5 = new Intent(getApplicationContext(), Gallery.class);
+                startActivityForResult(intent5, RESULT_OK);
+                finish();
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+            }
+        });
+        Log.d(TAG, "onCreate: out");
+
+        _button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent6 = new Intent(getApplicationContext(), Newsletter.class);
+                startActivityForResult(intent6, RESULT_OK);
+                finish();
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+            }
+        });
+        Log.d(TAG, "onCreate: out");
+
+        _button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent7 = new Intent(getApplicationContext(), Deals.class);
+                startActivityForResult(intent7, RESULT_OK);
+                finish();
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+            }
+        });
+        Log.d(TAG, "onCreate: out");
+
+        _button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent8 = new Intent(getApplicationContext(), Blog.class);
+                startActivityForResult(intent8, RESULT_OK);
+                finish();
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+            }
+        });
+        Log.d(TAG, "onCreate: out");
+
+        _button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent9 = new Intent(getApplicationContext(), WorkWithUs.class);
+                startActivityForResult(intent9, RESULT_OK);
+                finish();
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+            }
+        });
+        Log.d(TAG, "onCreate: out");
 
     }
 

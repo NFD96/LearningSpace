@@ -1,11 +1,13 @@
 package com.example.danutneagu.magicsaloons;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import butterknife.Bind;
@@ -17,12 +19,14 @@ Neagu Danut
  */
 
 public class Contact extends AppCompatActivity {
+    private static final String TAG = "Contact";
 
     @Bind(R.id.editText)EditText _editText;
     @Bind(R.id.editText2)EditText _editText2;
     @Bind(R.id.editText3)EditText _editText3;
     @Bind(R.id.editText4)EditText _editText4;
     @Bind(R.id.button) Button _button;
+    @Bind(R.id.imageView2) ImageView _imageView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +34,10 @@ public class Contact extends AppCompatActivity {
         setContentView(R.layout.activity_contact);
         ButterKnife.bind(this);
 
-        String name = _editText.getText().toString();
-        String phone = _editText2.getText().toString();
-        String email = _editText3.getText().toString();
-        String mess = _editText4.getText().toString();
+//        String name = _editText.getText().toString();
+//        String phone = _editText2.getText().toString();
+//        String email = _editText3.getText().toString();
+//        String mess = _editText4.getText().toString();
 
 
 
@@ -65,7 +69,13 @@ public class Contact extends AppCompatActivity {
                                            } else {
                                                _editText3.setError(null);
                                            }
-                                           Toast.makeText(Contact.this, "Sending Test: " + name + " " + phone + " " + email + " " + mess + " " + valid + ".", Toast.LENGTH_LONG).show();
+                                           if (mess.isEmpty()) {
+                                               _editText4.setError("fill empty space");
+                                               valid = false;
+                                           } else {
+                                               _editText4.setError(null);
+                                           }
+                                           Toast.makeText(Contact.this, "Sending test: " + name + " " + phone + " " + email + " " + mess + " " + valid + ".", Toast.LENGTH_LONG).show();
 
                                        }
 

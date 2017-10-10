@@ -5,28 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.example.danutneagu.magicsaloons.ImageList2">
+    tools:context="com.example.danutneagu.magicsaloons.ImageList2"
+    android:weightSum="1">
 
     <ImageView
         android:id="@+id/sectionView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@mipmap/ic_launcher"/>
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="100dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/Logo"/>
 
     <TextView
-        android:layout_gravity="center"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:id="@+id/textView1"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="-240dp"
         android:text="Text View"
+        android:textSize="25sp"
         />
 
 </LinearLayout>

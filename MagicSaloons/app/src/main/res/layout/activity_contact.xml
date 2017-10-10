@@ -27,6 +27,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="-50dp"
+            android:contentDescription="@string/Logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -34,6 +35,21 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.615"
             app:srcCompat="@drawable/logo"/>
+
+        <com.example.danutneagu.magicsaloons.FontSpannableTextView
+            android:id="@+id/textViewContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/test"
+            app:fontspannabletextview_partialText="*3000"
+            app:fontspannabletextview_partialTextColor="@color/primary_darker"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="0.14"/>
 
         <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -50,7 +66,7 @@
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="Name"
+                android:hint="@string/Nume"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
         </android.support.design.widget.TextInputLayout>
@@ -70,7 +86,7 @@
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="number"
-                android:hint="Phone Number"
+                android:hint="@string/Telefon"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText"/>
 </android.support.design.widget.TextInputLayout>
@@ -90,7 +106,7 @@
                 android:layout_marginTop="7dp"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:hint="E-mail"
+                android:hint="@string/wEmail"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText2"/>
 </android.support.design.widget.TextInputLayout>
@@ -108,7 +124,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="16dp"
                 android:ems="10"
-                android:hint="Mesaj*"
+                android:hint="@string/Mesaj"
                 app:layout_constraintHorizontal_bias="0.225"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -117,13 +133,18 @@
 
         <Button
             android:id="@+id/button"
+            style="@android:style/Widget.Holo.Button.Small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Send Message"
+            android:layout_marginTop="56dp"
+            android:backgroundTint="@color/primary_darker"
+            android:text="@string/Trimite"
+            android:textColor="@color/accent"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText4"/>

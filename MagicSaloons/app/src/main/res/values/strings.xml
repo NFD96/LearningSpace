@@ -1,18 +1,218 @@
-<resources>
-    <string name="app_name">Magic Saloons</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Saloanele Magic</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="blog_header">A inceput goana dupa MAGIC POINTS! colecteaza bonusurile magice! la fiecare suma cheltuita, magic te rasplateste cu magic points! ce trebuie sa faci mai exact? este foarte simplu!</string>
+    <string name="blog_container">In primul rand, fii cu ochii pe Calendarul Ofertelor Magice: saloanelemagic.ro/calendar sau pe mobile in sectiunea Oferte. In cadrul acestuia sunt prezentate toate bonusurile noastre!
+Urmatorul pas este sa ne vizitezi si sa beneficiezi de serviciile noastre!
+Bonusurile sunt exprimate in procente, procentul urmand sa fie aplicat sumei totale de pe bon.
+Asadar, vei primi in cardul virtual MAGIC, bonusul procentual din ziua respectiva,calculat din valoarea totala a bonului.
+Echivalentul valorii va fi transferat in cardul tau, sub forma de MAGIC Points (1 magic point = 1 leu).
+Spre exemplu, daca bonul valoreaza 100 lei si in ziua respectiva bonusul acordat este de 10%, vei primi in cont 10 magic points (1 leu x 10 = 10 lei).
+Punctele se incarca in cont dupa inchiderea bonului, putand fi folosite incepand cu achitarea urmatoarelor tranzactii.
+In plus, in unele zile, am "presarat" EXTRA oferte, de care te poti bucura pe loc!
+Suna bine, nu-i asa?
+Cheltuieste si primeste! Te asteptam si pe tine sa ne vizitezi, sa beneficiezi de serviciile tale favorite, castigand instant magic points
+Regulamentul oficial privind sistemul de bonusuri Magic Points.</string>
+    <string name="paragraph1">Art 1. Organizatorul:
+este compania Magic Smart Grup SRL,cu sediul în Bucuresti, Str. Serg. Nutu Ion, nr.27, sector 5, Bucuresti, inregistrata la Registrul Comertului cu nr. J40/9408/2014, CIF RO33472999.
+</string>
+    <string name="paragraph2">Art 2. Participanti:
+In programul de bonusuri se poate inscrie orice persoana fizica care achizitioneaza servicii din locatiile Organizatorului.
+</string>
+    <string name="paragraph3" formatted="true">Art 3. Locatii:
+Programul este valabil doar in cadrul locatiilor Organizatorului:
+   Magic Salon Berceni - Sos. Oltenitei, 140;
+   Magic Salon Rahova - Sos Alexandriei, Nr 90;
+   Magic Salon Pantelimon - Sos Pantelimon, Nr 91;
+   Magic Salon Dristor - Bvd Camil Ressu, Nr 8;
+   Magic Salon Militari - Bvd Iuliu Maniu, Nr 59;
+   Magic Salon Otopeni - 23 August, Nr 1;
+   Magic Salon Drumul Taberei - Str Brasov, Nr 24;
+   Magic Salon VictorieI - Sos Nicolae Titulescu, Nr 81-87;
+   Magic Salon Titan - Bvd 1 Decembrie 1918, Nr 41;
+   Magic Salon Baneasa - Bvd Aerogarii, Nr 2-8
+</string>
+    <string name="paragraph4" formatted="true">Art 4. Mecanism
+Pentru acordarea si cumularea bonusurilor, este necesar cardul virtual magic.
+Pentru realizarea cardului virtual, Organizatorul va solicita Participantului urmatoarele date: Nume, Prenume, Numar de telefon, Data Nasterii si Adresa de Email.
+Bonusurile sunt exprimate in puncte. Un punct valoreaza 1 leu.
+Acestea vor fi acordate in functie de promotiile active din calendarul ofertelor, afisat pe site-ul Organizatorului: saloanelemagic.ro/calendar sau pe mobile in sectiunea Oferte si anume zilele:
+Zilele: 1, 2, 7, 8, 9, 14, 15, 16, 21, 22, 23, 28, 29, 30 iulie si 4, 5, 6, 11, 12, 13, 18, 19, 20, 25, 26 si 27 august - Participantul va primi in cardul virtual magic din valoarea totala a bonului. Echivalentul valorii va fi transferat sub forma de puncte bonus (1 punct = 1 leu).
+Spre exemplu, daca bonul valoreaza 100 lei, participantul va primi in cont 2 puncte bonus.
+Zilele: 6, 13, 20, 27 iulie si 17, 24 si 31 august 2017 - Participantul va primi in cardul virtual magic 3% din valoarea totala a bonului. Echivalentul valorii va fi transferat sub forma de puncte bonus (1 punct = 1 leu).
+</string>
+    <string name="paragraph4continued">Zilele: 5, 12, 19, 26 iulie si 3, 10, 16, 23 si 30 august 2017 - Participantul va primi in cardul virtual magic 4% din valoarea totala a bonului. Echivalentul valorii va fi transferat sub forma de puncte bonus (1 punct = 1 leu).
+</string>
+    <string name="paragraph4continued2">Zilele: 3, 4, 10, 11, 17, 18, 24, 25, 31 iulie si 2, 9, 21, 22, 28, 29 august 2017 - Participantul va primi in cardul virtual magic 5% din valoarea totala a bonului. Echivalentul valorii va fi transferat sub forma de puncte bonus (1 punct = 1 leu).
+</string>
+    <string name="paragraph4continued3">Zilele: 1, 7, 8, 14, 15 august 2017 - Participantul va primi in cardul virtual magic 6% din valoarea totala a bonului. Echivalentul valorii va fi transferat sub forma de puncte bonus (1 punct = 1 leu).
+Punctele se incarca in cont dupa achitarea bonului curent, putand fi folosite incepand cu achitarea urmatoarei/urmatoarelor tranzactii.
+Punctele bonus se consuma exclusiv pe produse sau servicii din cadrul locatiilor Organizatorului.
+</string>
+    <string name="paragraph5">Art. 5 Durata:
+Perioada valabilitatii programului privind sistemul de bonusuri Magic Points este nelimitata, incepand cu data de 01.03.2017.
+Emitentul cardurilor isi rezerva dreptul de a renunta la program oricand considera necesar.
+</string>
+    <string name="paragraph6">Art. 6 Conditii de validitate:
+Pentru a beneficia de avantajele programului de bonusuri Magic Points, clientul trebuie sa indeplineasca simultan urmatoarele conditii:
+a) Participantul trebuie sa indeplineasca conditiile de la Art. 2
+b) Pentru a se putea crea cardul, clientul trebuie sa ofere urmatoarele date: Nume, Prenume, Numar de telefon, Data Nasterii si Adresa de Email.
+c) Cardul poate fi folosit si acumuleaza puncte din momentul inregistrarii lui conform Art.4, pct b.
+d) Punctele bonus au perioada de valabilitate nelimitata.Pentru a le afla, clientul poate intreba la receptie sau poate contacta Organizatorul pe numarul de telefon *3000, tasta 0.
+</string>
+    <string name="paragraph7">Art. 7 – Regulamentul:
+Fiecare card virtual aferent programului de bonusuri Magic Points este unic si atribuit unei singure persoane.
+Cardul virtual nu are valoare comerciala si nu se emite contra cost. Nu se poate acorda numerar la contravaloarea punctelor acumulate in contul de card. Acest card virtual nu este un card de plata sau de credit, sau vreun alt mijloc de plata. Emitentul si proprietarul acestui card virtual este Organizatorul, care isi asuma dreptul de a decide sistarea in orice moment a programului de bonusare sau de anulare a cardului. Cardul virtual poate fi utilizat in conformitate cu acest regulament.
+</string>
+    <string name="paragraph8">Art. 8 – Alte Clauze:
+Organizatorul isi rezerva dreptul de a modifica prezentul Regulament pe durata existentei programului de bonusare Magic Points, fara o notificare prealabila. Varianta modificata va fi adusa la cunostinta clientilor prin afisare pe site-ul www.saloanelemagic.ro.Pentru orice alte informatii sau nelamuriri puteti contacta Departamentul Marketing la adresa de e-mail: marketing@saloanelemagic.ro.
+Prezentul Regulament este pus gratuit la dispozitia clientilor la cererea acestora in salon.
+</string>
+    <string name="finalparagraph">Administrator:
+Nistor Denisa
+</string>
+    <string name="Logo">Logo</string>
+    <string name="DespreNoi">Despre Noi</string>
+    <string name="Galerie">Galerie</string>
+    <string name="Blog">Blog</string>
+    <string name="Oferte">Oferte</string>
+    <string name="Contact">Contact</string>
+    <string name="ProduseSiServicii">Produse &amp; Servicii</string>
+    <string name="Angajare">Angajari</string>
+    <string name="News">Newsletter</string>
+    <string name="Logout">Logout</string>
+    <string name="Mesaj">Mesaj *</string>
+    <string name="CreateAcc">Create Account</string>
+    <string name="Amember">Already a member? Login</string>
+    <string name="Angajari">Daca vrei sa faci parte din echipa saloanele magic,completeaza formularul de mai jos cu datele tale.</string>
+    <string name="Newsletter">Aboneaza-te la newsletter si fii la curent cu toate noutatile si ofertele noastre!</string>
+    <string name="prompt_password">Password *</string>
+    <string name="ReEnterPass">Re-enter password *</string>
+    <string name="adresa">Adresa *</string>
+    <string name="Email">E-mail</string>
+    <string name="Password">Password</string>
+    <string name="Login">Login</string>
+    <string name="Register">No account yet? Create one</string>
+    <string name="Nume">Nume *</string>
+    <string name="wEmail">E-mail *</string>
+    <string name="Birth">Data nasterii *</string>
+    <string name="Subscribe">MA ABONEZ</string>
+    <string name="Prenume">Prenume *</string>
+    <string name="Telefon">Telefon *</string>
+    <string name="Experienta">Experienta *</string>
+    <string name="Trimite">Trimite Mesaj</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="test">Pentru sugestii,reclamatii sau informatii suplimentare completati formularul de mai jos. pentru programari apelati *3000.</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
     <string name="title_activity_signup">signup</string>
+    <string name="button">Button</string>
+
+    <string name="youtube_api_demo">YouTube API Demos</string>
+
+    <string name="videowall_demo_name">Video Wall</string>
+
+    <string name="videolist_demo_name">Video List</string>
+
+    <string name="standalone_player_demo_name">Standalone Player</string>
+
+    <string name="playerview_demo_name">Simple PlayerView</string>
+
+    <string name="fragment_demo_name">Simple PlayerFragment</string>
+
+    <string name="player_controls_demo_name">Custom Player Controls</string>
+
+    <string name="action_bar_demo_name">Overlay ActionBar Demo</string>
+
+    <string name="fullscreen_demo_name">Custom Fullscreen Handling</string>
+
+    <string name="intents_demo_name">YouTube App Launcher Intents</string>
+
+    <string name="playerview_text">This is a YouTubePlayerView!</string>
+
+    <string name="playerfragment_text">This is a YouTubePlayerFragment!</string>
+
+    <string name="demo_select">Please select a demo:</string>
+
+
+    -<string name="some_demos_disabled">
+* Your device is currently running Android API version
+<xliff:g id="current_version">%1$s</xliff:g>
+.
+</string>
+
+
+    -<string name="list_item_disabled">
+Requires Android API version
+<xliff:g id="required_version">%1$s</xliff:g>
+or higher.
+</string>
+
+    <string name="play">Play</string>
+
+    <string name="pause">Pause</string>
+
+    <string name="skip_to">Skip To</string>
+
+    <string name="seconds">secs</string>
+
+    <string name="player_style">Player Style</string>
+
+    <string name="def">Default</string>
+
+    <string name="minimal">Minimal</string>
+
+    <string name="chromeless">Chromeless</string>
+
+    <string name="play_video">Play video</string>
+
+    <string name="play_playlist">Play playlist</string>
+
+    <string name="play_video_list">Play video list</string>
+
+    <string name="start_index">Start index</string>
+
+    <string name="start_time">Start time (sec)</string>
+
+    <string name="autoplay">Autoplay</string>
+
+    <string name="lightbox_mode">Lightbox mode</string>
+
+    <string name="intent_select">Please select an action:</string>
+
+    <string name="intent_disabled">This intent is not supported with the currently installed version of YouTube.</string>
+
+
+    -<string name="youtube_currently_installed">
+YouTube version installed on this device:
+<xliff:g id="youtube_version">%1$s</xliff:g>
+.
+</string>
+
+    <string name="youtube_not_installed">YouTube is not installed on this device.</string>
+
+    <string name="fullscreen_tutorial">This is a demo which shows how to handle fullscreen behaviour. This activity has differents layouts for portrait, landscape and fullscreen. The user can enter fullscreen either by using the player controller or programmatically by the programmer (here using a button). If your activity does not have a landscape layout, you can choose to automatically enter fullscreen when the device is rotated to landscape orientation.</string>
+
+    <string name="enter_fullscreen">Enter Fullscreen</string>
+
+    <string name="landscape_fullscreen">Always fullscreen in landscape</string>
+
+    <string name="actionbar_tutorial">This is a demo which shows how to use the ActionBar as an overlay when the video is playing in fullscreen. The actionbar will automatically fade away along with the player controls when the video is being played in fullscreen. While not in fullscreen the Actionbar is visible and does not overlay any of the views.</string>
+
+    <string name="error_thumbnail_view">There was an error initializing the YouTubeThumbnailView (%1$s)</string>
+
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <declare-styleable name="FontSpannableTextView">
+        <attr name="fontspannabletextview_partialText" format="string"/>
+        <attr name="fontspannabletextview_partialTextColor" format="color"/>
+    </declare-styleable>
 </resources>

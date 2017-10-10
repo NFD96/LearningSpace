@@ -22,7 +22,8 @@
             android:layout_height="72dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo"
+            android:contentDescription="@string/Logo"/>
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout
@@ -35,7 +36,7 @@
                 android:id="@+id/_emailText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="@string/Email"
                 android:inputType="textEmailAddress"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -50,7 +51,7 @@
                 android:id="@+id/_passwordText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint="@string/Password"
                 android:inputType="textPassword"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -58,10 +59,10 @@
             android:id="@+id/_loginButton"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
             android:padding="12dp"
-            android:text="Login"/>
+            android:text="@string/Login"/>
 
         <TextView
             android:id="@+id/_signupLink"
@@ -69,8 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:gravity="center"
-            android:text="No account yet? Create one"
-            android:textSize="16dip"/>
+            android:text="@string/Register"
+            android:textSize="16sp"/>
 
     </LinearLayout>
 </ScrollView>

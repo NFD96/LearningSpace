@@ -44,8 +44,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-//      Intent intent = new Intent(this, MainActivity.class);
-//        startActivity(intent);
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
@@ -81,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         _loginButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
-                R.style.Theme_AppCompat_Dialog);
+                R.style.Theme_AppCompat_DialogWhenLarge);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
@@ -104,14 +102,13 @@ public class LoginActivity extends AppCompatActivity {
                 }, 3000);
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
 
                 // TODO: Implement successful SignupActivity logic here
-                // By default we just finish the Activity and log them in automatically
+                // By default I just finish the Activity and log them in automatically
                 this.finish();
             }
         }

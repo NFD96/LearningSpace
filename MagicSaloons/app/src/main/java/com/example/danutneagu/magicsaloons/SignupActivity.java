@@ -68,7 +68,7 @@ public class SignupActivity extends AppCompatActivity {
         _signupButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(SignupActivity.this,
-                R.style.Theme_AppCompat_Dialog);
+                R.style.Theme_AppCompat_DialogWhenLarge);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Creating Account...");
         progressDialog.show();
@@ -156,7 +156,7 @@ public class SignupActivity extends AppCompatActivity {
         }
 
         if (reEnterPassword.isEmpty() || reEnterPassword.length() < 4 || reEnterPassword.length() > 16 || !(reEnterPassword.equals(password))) {
-            _reEnterPasswordText.setError("Password Do not match");
+            _reEnterPasswordText.setError("password do not match");
             valid = false;
         } else {
             _reEnterPasswordText.setError(null);
