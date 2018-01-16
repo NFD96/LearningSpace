@@ -1,11 +1,8 @@
 package com.example.danutneagu.magicsaloons;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.telecom.Connection;
 import android.util.Log;
 
 import android.content.Intent;
@@ -14,8 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.sql.SQLException;
 
 import butterknife.ButterKnife;
 import butterknife.Bind;
@@ -26,6 +21,7 @@ Neagu Danut
  */
 
 public class LoginActivity extends AppCompatActivity {
+    // Declararea variabilelor
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
 
@@ -44,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-
+        // Capturarea activitatii la (button) click
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -58,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                // Start the Signup activity
+                // Porneste activitatea de SignUp
                 Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
                 finish();
@@ -67,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    // Metode
     public void login() {
         Log.d(TAG, "Login");
 
@@ -81,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
                 R.style.Theme_AppCompat_DialogWhenLarge);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Authenticating...");
+        progressDialog.setMessage("Se autentifica...");
         progressDialog.show();
 //        Intent intent = new Intent(this, MainActivity.class);
 //        startActivity(intent);
@@ -89,12 +86,12 @@ public class LoginActivity extends AppCompatActivity {
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        // TODO: Implement your own authentication logic here.
+        // TODO: Logica de implementare a autentificarii
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
+                        // Pentru un call realizat fie onLoginSuccess sau onLoginFailed
                         onLoginSuccess();
                         // onLoginFailed();
                         progressDialog.dismiss();
@@ -107,8 +104,8 @@ public class LoginActivity extends AppCompatActivity {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
 
-                // TODO: Implement successful SignupActivity logic here
-                // By default I just finish the Activity and log them in automatically
+                // TODO: Logica de implementare a autentificarii
+                // Activitatea este finalizata standard si te autentifica automat
                 this.finish();
             }
         }
@@ -116,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        // Disable going back to the LoginActivity
+        // Dezactivarea butonului de back in LoginActivity
         moveTaskToBack(true);
 //        super.onBackPressed();
 
@@ -135,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Procesul a esuat", Toast.LENGTH_LONG).show();
 
         _loginButton.setEnabled(true);
     }
@@ -148,18 +145,20 @@ public class LoginActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
+            _emailText.setError("Introdu o adresa de e-mail valida");
             valid = false;
         } else {
             _emailText.setError(null);
         }
 
         if (password.isEmpty() || password.length() < 4 || password.length() > 16) {
-            _passwordText.setError("between 4 and 16 alphanumeric characters");
+            _passwordText.setError("Intre 4 - 16 caractere alfanumerice");
             valid = false;
         } else {
             _passwordText.setError(null);
         }
+
+// Tentativa Sqlite
 //        if (conn != null) {
 //            try {
 //                conn.close();
@@ -167,6 +166,7 @@ public class LoginActivity extends AppCompatActivity {
 //                e.printStackTrace();
 //            }
 //        }
+
         return valid;
     }
 }

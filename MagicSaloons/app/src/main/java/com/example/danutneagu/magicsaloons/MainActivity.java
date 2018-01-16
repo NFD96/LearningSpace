@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+
+import com.example.danutneagu.magicsaloons.com.example.danutneagu.magicsaloons.extensions.RetailerActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -16,7 +19,7 @@ Neagu Danut
  */
 
 public class MainActivity extends AppCompatActivity {
-
+    //Declararea variabilelor
 //    EditText editText = (EditText)findViewById(R.id.editText);
 //    TextView textView = (TextView)findViewById(R.id.textView);
 
@@ -49,10 +52,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        //Bara de sus ascunsa
+        getSupportActionBar().hide();
+        //Setare layout fullscreen
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 //        Intent intent = new Intent(this, LoginActivity.class);
 //        startActivity(intent);
 
-
+        // Capturarea activitatii la (button) click
         _button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -207,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
 
 //    @Override
 //    public void onBackPressed() {
-//        // Disable going back to the LoginActivity
 ////        moveTaskToBack(true);
 //        Intent intent = new Intent(this, LoginActivity.class);
 //        startActivityForResult(intent, RESULT_OK);

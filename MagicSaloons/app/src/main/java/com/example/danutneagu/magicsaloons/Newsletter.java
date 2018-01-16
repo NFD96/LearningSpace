@@ -3,7 +3,6 @@ package com.example.danutneagu.magicsaloons;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +13,12 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+/**
+ * Created by Danut Neagu on 10/3/2017.
+ */
+
 public class Newsletter extends AppCompatActivity {
+    //Declararea variabilelor
     private static final String TAG = "Newsletter";
 
     @Bind(R.id.textView2) TextView _textView2;
@@ -31,6 +35,7 @@ public class Newsletter extends AppCompatActivity {
         setContentView(R.layout.activity_newsletter);
         ButterKnife.bind(this);
 
+        // Capturarea activitatii la (button) click
         _subscribeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,28 +43,27 @@ public class Newsletter extends AppCompatActivity {
                 String name = _nameText.getText().toString();
                 String email = _emailText.getText().toString();
 
-                if (name.isEmpty() || name.length() < 3) {
-                    _nameText.setError("at least 3 characters");
+                if (name.isEmpty() || name.length() < 10) {
+                    _nameText.setError("Nume / Prenume");
                     valid = false;
                 } else {
                     _nameText.setError(null);
                 }
                 if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    _emailText.setError("enter a valid email address");
+                    _emailText.setError("Introdu o adresa de e-mail valida");
                     valid = false;
                 } else {
                     _emailText.setError(null);
                 }
-                Toast.makeText(Newsletter.this, "Subscribe test: " + name + " " + email + " " + valid + ".", Toast.LENGTH_LONG).show();
+                Toast.makeText(Newsletter.this, "Test abonare: " + name + " " + email + " " + valid + ".", Toast.LENGTH_LONG).show();
 
             }
         });
     }
 
+    // Butonul de back default devine functie activa de back in app cu animatie (rasfoire pagini)
         @Override
     public void onBackPressed() {
-        // Disable going back to the LoginActivity
-//        moveTaskToBack(true);
         Intent intent = new Intent(this, MainActivity.class);
         startActivityForResult(intent, RESULT_OK);
         finish();

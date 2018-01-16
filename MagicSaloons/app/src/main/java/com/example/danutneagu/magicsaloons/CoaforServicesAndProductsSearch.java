@@ -16,6 +16,7 @@ Testing Search Module
  */
 
 public class CoaforServicesAndProductsSearch extends AppCompatActivity {
+    //Declararea variabilelor
 
     // List view
     private ListView lv;
@@ -52,7 +53,7 @@ public class CoaforServicesAndProductsSearch extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-                // When user changed the Text
+                // Cand userul schimba textul
                 CoaforServicesAndProductsSearch.this.adapter.getFilter().filter(cs);
             }
 

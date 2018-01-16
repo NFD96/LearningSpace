@@ -1,7 +1,6 @@
 package com.example.danutneagu.magicsaloons;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,12 +12,12 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/*
-First Attempt
-Neagu Danut
+/**
+ * Created by Danut Neagu on 10/3/2017.
  */
 
 public class Contact extends AppCompatActivity {
+    //Declararea variabilelor
     private static final String TAG = "Contact";
 
     @Bind(R.id.editText)EditText _editText;
@@ -39,8 +38,7 @@ public class Contact extends AppCompatActivity {
 //        String email = _editText3.getText().toString();
 //        String mess = _editText4.getText().toString();
 
-
-
+        // Capturarea activitatii la (button) click
         _button.setOnClickListener(new View.OnClickListener() {
 
                                        @Override
@@ -51,31 +49,31 @@ public class Contact extends AppCompatActivity {
                                            String email = _editText3.getText().toString();
                                            String mess = _editText4.getText().toString();
 
-                                           if (name.isEmpty() || name.length() < 3) {
-                                               _editText.setError("at least 3 characters");
+                                           if (name.isEmpty() || name.length() < 10) {
+                                               _editText.setError("Nume / Prenume");
                                                valid = false;
                                            } else {
                                                _editText.setError(null);
                                            }
                                            if (phone.isEmpty() || phone.length() != 10) {
-                                               _editText2.setError("enter a valid mobile number");
+                                               _editText2.setError("Introdu un numar de mobil valid");
                                                valid = false;
                                            } else {
                                                _editText2.setError(null);
                                            }
                                            if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                                               _editText3.setError("enter a valid email address");
+                                               _editText3.setError("Introdu o adresa de e-mail valida");
                                                valid = false;
                                            } else {
                                                _editText3.setError(null);
                                            }
-                                           if (mess.isEmpty()) {
-                                               _editText4.setError("fill empty space");
+                                           if (mess.isEmpty() || mess.length() != 50) {
+                                               _editText4.setError("Completeaza spatiul gol.Minim 50 de caractere");
                                                valid = false;
                                            } else {
                                                _editText4.setError(null);
                                            }
-                                           Toast.makeText(Contact.this, "Sending test: " + name + " " + phone + " " + email + " " + mess + " " + valid + ".", Toast.LENGTH_LONG).show();
+                                           Toast.makeText(Contact.this, "Test trimitere: " + name + " " + phone + " " + email + " " + mess + " " + valid + ".", Toast.LENGTH_LONG).show();
 
                                        }
 
@@ -94,10 +92,9 @@ public class Contact extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
     }
 
+    // Butonul de back default devine functie activa de back in app cu animatie (rasfoire pagini)
     @Override
     public void onBackPressed() {
-        // Disable going back to the LoginActivity
-//        moveTaskToBack(true);
         Intent intent = new Intent(this, MainActivity.class);
         startActivityForResult(intent, RESULT_OK);
         finish();

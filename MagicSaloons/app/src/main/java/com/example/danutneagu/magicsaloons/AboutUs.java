@@ -1,31 +1,23 @@
 package com.example.danutneagu.magicsaloons;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.MediaController;
-import android.widget.VideoView;
 
 //import com.google.android.youtube.player.YouTubeBaseActivity;
 //import com.google.android.youtube.player.YouTubePlayer;
 //import com.google.android.youtube.player.YouTubePlayerView;
 //import com.google.android.youtube.player.YouTubeThumbnailView;
 
-import java.util.List;
 
-import static com.example.danutneagu.magicsaloons.R.raw.video;
-import static com.example.danutneagu.magicsaloons.R.raw.videotest;
+/**
+ * Created by Danut Neagu on 10/3/2017.
+ */
 
 public class AboutUs extends AppCompatActivity {
+    //Declararea variabilelor
     private static final String TAG = "AboutUs";
 
 //    Button button10 = (Button) findViewById(R.id.button10);
@@ -41,14 +33,14 @@ public class AboutUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        // Locate the button in activity_main.xml
+        // Localizare button in activity_main.xml
         Button _myButton = (Button) findViewById(R.id.MyButton);
 
-        // Capture button clicks
+        // Capturarea activitatii la (button) click
         _myButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
-                // Start NewActivity.class
+                // Start VideoViewActivity.class
                 Intent myIntent = new Intent(AboutUs.this,
                         VideoViewActivity.class);
                 startActivity(myIntent);
@@ -271,7 +263,7 @@ public class AboutUs extends AppCompatActivity {
     }
 //    @Override
 //    public void surfaceChanged(SurfaceHolder arg0, int arg1, int arg2, int arg3) {
-//        // TODO Auto-generated method stub
+//
 //    }
 //
 //    @Override
@@ -299,6 +291,7 @@ public class AboutUs extends AppCompatActivity {
 //      mediaPlayer.start();
 //    }
 
+    // Butonul de back default devine functie activa de back in app cu animatie (rasfoire pagini)
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);

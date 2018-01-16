@@ -49,8 +49,7 @@
             android:name=".AboutUs"
             android:theme="@style/Theme.AppCompat">
         </activity>
-        <activity
-            android:name=".VideoViewActivity">
+        <activity android:name=".VideoViewActivity">
         </activity>
         <activity
             android:name=".Deals"
@@ -73,6 +72,8 @@
             android:theme="@style/Theme.AppCompat">
         </activity>
         <activity android:name=".CoaforServicesAndProductsSearch">
+        </activity>
+        <activity android:name=".com.example.danutneagu.magicsaloons.extensions.RetailerActivity">
         </activity>
     </application>
 

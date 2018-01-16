@@ -20,6 +20,7 @@ Neagu Danut
  */
 
 public class SignupActivity extends AppCompatActivity {
+    // Declararea variabilelor
     private static final String TAG = "SignupActivity";
 
     @Bind(R.id.input_name) EditText _nameText;
@@ -37,7 +38,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         ButterKnife.bind(this);
 
-
+        // Capturarea activitatii la (button) click
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +49,7 @@ public class SignupActivity extends AppCompatActivity {
         _loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Finish the registration screen and return to the Login activity
+                // Finalizarea inscrierii si returnarea catre activitatea de Login
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(intent);
                 finish();
@@ -57,6 +58,7 @@ public class SignupActivity extends AppCompatActivity {
         });
     }
 
+    // Metode
     public void signup() {
         Log.d(TAG, "Signup");
 
@@ -70,23 +72,23 @@ public class SignupActivity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(SignupActivity.this,
                 R.style.Theme_AppCompat_DialogWhenLarge);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Creating Account...");
+        progressDialog.setMessage("Se creeaza contul...");
         progressDialog.show();
 
-        String name = _nameText.getText().toString();
-        String address = _addressText.getText().toString();
-        String email = _emailText.getText().toString();
-        String mobile = _mobileText.getText().toString();
-        String password = _passwordText.getText().toString();
-        String reEnterPassword = _reEnterPasswordText.getText().toString();
+//        String name = _nameText.getText().toString();
+//        String address = _addressText.getText().toString();
+//        String email = _emailText.getText().toString();
+//        String mobile = _mobileText.getText().toString();
+//        String password = _passwordText.getText().toString();
+//        String reEnterPassword = _reEnterPasswordText.getText().toString();
 
-        // TODO: Implement your own signup logic here.
+        // TODO: Logica de implementare a inregistrarii
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        // On complete call either onSignupSuccess or onSignupFailed
-                        // depending on success
+                        // Pentru un call realizat fie onSignupSuccess sau onSignupFailed
+                        // Depinzand de succesul respectivului call
                         onSignupSuccess();
                         // onSignupFailed();
                         progressDialog.dismiss();
@@ -104,7 +106,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     public void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Procesul a esuat", Toast.LENGTH_LONG).show();
 
         _signupButton.setEnabled(true);
     }
@@ -119,15 +121,15 @@ public class SignupActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
         String reEnterPassword = _reEnterPasswordText.getText().toString();
 
-        if (name.isEmpty() || name.length() < 3) {
-            _nameText.setError("at least 3 characters");
+        if (name.isEmpty() || name.length() < 10) {
+            _nameText.setError("Nume / Prenume");
             valid = false;
         } else {
             _nameText.setError(null);
         }
 
-        if (address.isEmpty()) {
-            _addressText.setError("enter a valid address");
+        if (address.isEmpty() || address.length() < 30) {
+            _addressText.setError("Introdu o adresa de domiciliu valida");
             valid = false;
         } else {
             _addressText.setError(null);
@@ -135,33 +137,42 @@ public class SignupActivity extends AppCompatActivity {
 
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
+            _emailText.setError("Introdu o adresa de e-mail valida");
             valid = false;
         } else {
             _emailText.setError(null);
         }
 
-        if (mobile.isEmpty() || mobile.length()!=10) {
-            _mobileText.setError("enter a valid mobile number");
+        if (mobile.isEmpty() || mobile.length() != 10) {
+            _mobileText.setError("Introdu un numar de mobil valid");
             valid = false;
         } else {
             _mobileText.setError(null);
         }
 
         if (password.isEmpty() || password.length() < 4 || password.length() > 16) {
-            _passwordText.setError("between 4 and 16 alphanumeric characters");
+            _passwordText.setError("Intre 4 - 16 caractere alfanumerice");
             valid = false;
         } else {
             _passwordText.setError(null);
         }
 
         if (reEnterPassword.isEmpty() || reEnterPassword.length() < 4 || reEnterPassword.length() > 16 || !(reEnterPassword.equals(password))) {
-            _reEnterPasswordText.setError("password do not match");
+            _reEnterPasswordText.setError("Parola nu se potriveste");
             valid = false;
         } else {
             _reEnterPasswordText.setError(null);
         }
 
         return valid;
+    }
+
+    // Butonul de back default devine functie activa de back in app cu animatie (rasfoire pagini)
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(R.anim.push_left_in,R.anim.push_left_out);
     }
 }

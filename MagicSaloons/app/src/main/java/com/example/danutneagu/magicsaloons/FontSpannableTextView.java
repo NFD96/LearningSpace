@@ -9,7 +9,6 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.widget.TextView;
 
 /**
  * Created by Danut Neagu on 9/18/2017.

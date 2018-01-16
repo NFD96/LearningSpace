@@ -1,19 +1,17 @@
 package com.example.danutneagu.magicsaloons;
 
-import android.os.Environment;
-
-import java.io.File;
-
 /**
  * Created by Danut Neagu on 10/6/2017.
  */
 
 public class CreateList {
+    // Declararea variabilelor
 
     private String image_title;
     private Integer image_id;
     private String image_Location;
 
+    //Metode
 
     public String getImage_title() {
         return image_title;

@@ -1,8 +1,10 @@
 package com.example.danutneagu.magicsaloons;
 
 import android.content.Context;
-import android.os.Environment;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
+import com.ceylonlabs.imageviewpopup.ImagePopup;
+
 import java.util.ArrayList;
 
 /**
@@ -21,6 +24,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private ArrayList<CreateList> galleryList;
     private Context context;
+    private int layoutResourceId;
+    public boolean isImageFitToScreen;
 
 
 //    private ArrayList<CreateList> prepareData(){
@@ -60,15 +65,33 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
     @Override
-    public void onBindViewHolder(MyAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(final MyAdapter.ViewHolder viewHolder, final int i) {
         viewHolder.title.setText(galleryList.get(i).getImage_title());
         viewHolder.img.setScaleType(ImageView.ScaleType.CENTER_CROP);
         viewHolder.img.setImageResource((galleryList.get(i).getImage_id()));
+        viewHolder.img.getDrawable();
         viewHolder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"Image", Toast.LENGTH_SHORT).show();
-            }
+                String test;
+                test = galleryList.get(i).getImage_title();
+                int currentimageindex = i;
+
+
+
+//                final ImagePopup imagePopup = new ImagePopup(context);
+//                imagePopup.setBackgroundColor(Color.BLACK);
+//                imagePopup.setFullScreen(true);
+//                imagePopup.setHideCloseIcon(true);
+//                imagePopup.setImageOnClickClose(true);
+//                ImageView imageView;
+//                imageView = viewHolder.img;
+//                imageView.findViewById(R.id.img);
+//                imagePopup.initiatePopup(imageView.getDrawable());
+//                imagePopup.viewPopup();
+                Toast.makeText(context,"Image Click" + " / " + " Image No: " + test + " / " + " Position index: " + currentimageindex , Toast.LENGTH_SHORT).show();
+        }
+
         });
     }
 
@@ -85,8 +108,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             super(view);
             title = (TextView)view.findViewById(R.id.title);
             img = (ImageView) view.findViewById(R.id.img);
-
-
+//            ImageView imageView = this.img;
         }
 
     }

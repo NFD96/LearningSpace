@@ -3,9 +3,8 @@ package com.example.danutneagu.magicsaloons;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-/*
-First Attempt
-Neagu Danut
+/**
+ * Created by Danut Neagu on 9/28/2017.
  */
 
 public class ImageList extends AppCompatActivity {

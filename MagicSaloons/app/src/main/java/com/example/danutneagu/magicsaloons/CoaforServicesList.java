@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 
 
 public class CoaforServicesList extends AppCompatActivity {
-
+    //Declararea variabilelor
     ListView listView;
     Context context;
     ArrayList progList;
@@ -38,13 +37,16 @@ public class CoaforServicesList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_image);
 
+        // Initializare si setare adapter
+        // Localizare listview
+        // Capturarea activitatii la (button) click
         MyListAdapter adapter = new MyListAdapter(this, progNames, progImages);
         listView = (ListView)findViewById(R.id.listView2);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(CoaforServicesList.this, " You clicked at " + progNames[position],Toast.LENGTH_LONG).show();
+                Toast.makeText(CoaforServicesList.this, " Ai selectat " + progNames[position],Toast.LENGTH_LONG).show();
                 if(position == 0){
                     Intent intent = new Intent(view.getContext(), CoaforServicesList2.class);
                     startActivityForResult(intent,0);
@@ -56,14 +58,16 @@ public class CoaforServicesList extends AppCompatActivity {
 //                Intent intent = new Intent(getApplicationContext(), CoaforServicesList2.class);
 //                startActivityForResult(intent, RESULT_OK);
 //                finish();
+
+                //Animatie cu efect de rasfoit pagini.
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
     }
+
+    // Butonul de back default devine functie activa de back in app cu animatie (rasfoire pagini)
     @Override
     public void onBackPressed() {
-        // Disable going back to the LoginActivity
-//        moveTaskToBack(true);
         Intent intent = new Intent(this, MainActivity.class);
         startActivityForResult(intent, RESULT_OK);
         finish();

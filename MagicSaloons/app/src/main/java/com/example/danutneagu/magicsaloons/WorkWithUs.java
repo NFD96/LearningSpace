@@ -3,8 +3,6 @@ package com.example.danutneagu.magicsaloons;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +14,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class WorkWithUs extends AppCompatActivity {
+    //Declararea variabilelor
     private static final String TAG = "WorkWithUs";
 
     @Bind(R.id.imageViewLogo) ImageView _imageViewAngj;
@@ -38,7 +37,7 @@ public class WorkWithUs extends AppCompatActivity {
 
 
 
-
+        // Capturarea activitatii la (button) click
         _buttonAngj.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -52,46 +51,47 @@ public class WorkWithUs extends AppCompatActivity {
                 String exp = _editTextExpAngj.getText().toString();
 
                 if (name.isEmpty() || name.length() < 3) {
-                    _editTextNumeAngj.setError("at least 3 characters");
+                    _editTextNumeAngj.setError("Cel putin 3 caractere");
                     valid = false;
                 } else {
                     _editTextNumeAngj.setError(null);
                 }
                 if (pName.isEmpty() || pName.length() < 3) {
-                    _editTextPrenumeAngj.setError("at least 3 characters");
+                    _editTextPrenumeAngj.setError("Cel putin 3 caractere");
                     valid = false;
                 } else {
                     _editTextPrenumeAngj.setError(null);
                 }
                 if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    _editTextMailAngj.setError("enter a valid email address");
+                    _editTextMailAngj.setError("Introdu o adresa de e-mail valida");
                     valid = false;
                 } else {
                     _editTextMailAngj.setError(null);
                 }
                 if (phone.isEmpty() || phone.length() != 10) {
-                    _editTextNrAngj.setError("enter a valid mobile number");
+                    _editTextNrAngj.setError("Introdu un numar de mobil valid");
                     valid = false;
                 } else {
                     _editTextNrAngj.setError(null);
                 }
-                if (birth.isEmpty() || birth.length() < 8) {
-                    _editTextNastereAngj.setError("enter a valid birth date");
+                if (birth.isEmpty() || birth.length() != 10) {
+                    _editTextNastereAngj.setError("Introdu o data de nastere valida");
                     valid = false;
                 } else {
                     _editTextNastereAngj.setError(null);
                 }
-                if (exp.isEmpty()) {
-                    _editTextExpAngj.setError("fill empty space");
+                if (exp.isEmpty() || exp.length() < 50) {
+                    _editTextExpAngj.setError("Completeaza spatiul gol.Minim 50 de caractere");
                     valid = false;
                 } else {
                     _editTextExpAngj.setError(null);
                 }
-                Toast.makeText(WorkWithUs.this, "Sending Test" + name + " " + pName + " " + phone + " " + email + " " + birth + " " + exp + " " + valid + ".", Toast.LENGTH_LONG).show();
+                Toast.makeText(WorkWithUs.this, "Test trimitere" + name + " " + pName + " " + phone + " " + email + " " + birth + " " + exp + " " + valid + ".", Toast.LENGTH_LONG).show();
             }
         });
     }
 
+    // Butonul de back default devine functie activa de back in app cu animatie (rasfoire pagini)
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);

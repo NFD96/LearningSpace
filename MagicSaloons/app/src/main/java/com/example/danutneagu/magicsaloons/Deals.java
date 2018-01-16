@@ -6,7 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CalendarView;
 
+/**
+ * Created by Danut Neagu on 10/4/2017.
+ */
+
 public class Deals extends AppCompatActivity {
+    //Declararea variabilelor
     private static final String TAG = "Deals";
 
     @Override
@@ -32,6 +37,7 @@ public class Deals extends AppCompatActivity {
 
     }
 
+    // Butonul de back default devine functie activa de back in app cu animatie (rasfoire pagini)
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
